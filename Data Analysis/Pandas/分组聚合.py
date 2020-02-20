@@ -41,3 +41,30 @@ china_data = df[df["Country"]=="CN"]
 
 grouped = china_data.groupedby(by="State/Province").count()["Brand"]
 print(grouped)
+
+
+
+#获取分组之后某一部分数据
+df.groupby(by=["Country","State/Province"])["Country"].count()
+
+#对某几列数据进行分组
+df["Country"].groupby(by = [df["Country"],df["State/Province"]]).count()
+
+#按照多个条件进行分组  返回Series
+grouped = df["Brand"].groupby(by=[df["Country"],df["State/Province"]]).count()
+print(grouped)
+print(type(grouped))
+
+
+#按照多个条件进行分组  返回DataFrame
+grouped1 = df[["Brand"]].groupby(by=[df["Country"],df["State/Province"]]).count()
+grouped2 = df.groupby(by=[df["Country"],df["State/Province"]])[["Brand"]].count()
+grouped3 = df.groupby(by=[df["Country"],df["State/Province"]]).count()[["Brand"]]
+
+print(group1)
+print("*"*100)
+print(group2)
+print("*"*100)
+print(group3)
+print("*"*100)
+
