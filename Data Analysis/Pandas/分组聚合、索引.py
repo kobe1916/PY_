@@ -68,3 +68,26 @@ print("*"*100)
 print(group3)
 print("*"*100)
 
+
+
+'''
+简单索引操作：
+获取index: df.index
+指定index: df.index=['x','y']
+重新设置index: df.reindex(list("abcdf"))  从中取出来....，对原有不做修改 
+指定某一列作为index：  df.set_index("Country",drop=False)
+返回index的唯一值  df.set_index("Country").index.unique()
+
+
+'''
+
+
+
+#索引的方法和属性
+print(grouped1,type(grouped1))
+
+
+
+#复合索引
+
+
