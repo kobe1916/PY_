@@ -21,7 +21,6 @@ plt.show()
 
 
 
-
 #使用matplotlib呈现出每个中国城市的店铺数量
 import pandas as pd
 from matplotlib impport pyplot as plt
