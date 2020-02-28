@@ -28,9 +28,8 @@ else:
     print('NO')
     
     
-    '''
-    Answer:
-    
+'''
+Answer:   
 []
 [1, 'sss', 3.3]
 ['a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'c']
