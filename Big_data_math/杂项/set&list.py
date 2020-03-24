@@ -26,6 +26,8 @@ if x in s1:
     print('YES')
 else:
     print('NO')
+
+
     
     
 '''
