@@ -31,6 +31,139 @@ print('单位矩阵I为：\n', E)
 
 
 
+# -*- coding: utf-8 -*-
+
+# 代码4-29
+import numpy as np
+A = np.matrix([[3, -1],[-1, 3]])
+# 方法一
+print('矩阵A的特征值为：', np.linalg.eigvals(A))
+
+# 方法二
+A1,A2 = np.linalg.eig(A)
+print('矩阵A的特征值为：', A1)
+print('矩阵A的特征向量为：\n', A2)
+
+
+
+
+# 代码4-30
+A = np.mat([[3,1],[2,2]])
+A1,A2 = np.linalg.eig(A)
+print('矩阵A的特征值为：\n', A1)
+print('矩阵A的特征向量为：\n', A2)
+
+
+
+
+# 代码4-31
+A = np.mat([[1,3,3],[-3,-5,-3],[3,3,1]])
+A1,A2 = np.linalg.eig(A)
+print('矩阵A的特征值为：', A1)
+print('矩阵A的特征向量为：\n', A2)
+# 构建矩阵P
+P = np.mat(A2)
+print('矩阵P为：\n', P)
+# 构建矩阵D
+D = np.diag(A1)
+print('矩阵D为：\n', D)
+
+
+
+# 代码4-32
+import math
+sq2 = math.sqrt(2)/2
+A = np.mat([[sq2,sq2],[-sq2,sq2]])
+print('矩阵A.T*A的结果为：\n', A.T*A)
+
+
+
+
+# 代码4-33
+v = np.array([1,-2,2,0])
+vv = math.sqrt(np.sum(v.T*v))
+u = (1/vv)*(v.T)
+print('向量v的长度为：', vv)
+print('单位向量u为：', u)
+
+
+
+
+# 代码4-34
+a = np.array([5,6,-1])
+b = np.array([4/3,-1,2/3])
+print('向量a*b的结果为：', np.sum(a*b))
+
+
+
+
+# 代码4-35
+A = np.mat([[3,-2,4],[-2,6,2],[4,2,3]])
+A1,A2 = np.linalg.eig(A)
+print('矩阵A的特征值为：', A1)
+print('矩阵A的特征向量为：\n', A2)
+# 特征向量正交化
+B3 = A2[:,2]-np.float(np.vdot(A2[:,2],A2[:,0]))/np.float(np.vdot(A2[:,0],A2[:,0]))*A2[:,0]
+# 特征向量单位化
+P1 = math.sqrt(np.linalg.norm(A2[:,0])) * A2[:,0]
+P2 = math.sqrt(np.linalg.norm(A2[:,1])) * A2[:,1]
+P3 = math.sqrt(np.linalg.norm(B3)) * B3
+# 构建矩阵D
+D = np.diag(A1)
+print('矩阵D为：\n', D)
+
+
+
+
+# 代码4-36
+L = np.mat([[1,1/2,0],[0,1/2,1],[0,0,0]])
+L1,L2 = np.linalg.eig(L)
+print('矩阵A的特征值为：', L1)
+print('矩阵A的特征向量为：\n', L2)
+# 构造矩阵
+D = np.diag(L1)
+print('矩阵D为：\n', D)
+# 构建矩阵C
+C = np.mat(L2)
+print('矩阵C为：\n', C)
+
+
+
+
+# 代码4-37
+# 求特征值
+A = np.mat([[4,11,14],[8,7,-2]])
+B = np.linalg.eigvals(A.T*A)
+print('特征值为：', B)
+# 计算奇异值
+import math
+print('奇异值1为：', math.sqrt(B[0]))
+print('奇异值3为：', math.sqrt(B[2]))
+
+
+
+
+# 代码4-38
+A = np.mat([[4,11,14],[8,7,-2]])
+U,X,V = np.linalg.svd(A)
+print('矩阵A的左奇异向量为：\n', U)
+print('矩阵A的奇异值为：', X)
+print('矩阵A的右奇异向量为：\n', V)
+
+
+
+
+# 代码4-39
+A = np.mat([[1,1,1,1,1],[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,1,0,1],
+            [1,0,1,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]])
+U,X,V = np.linalg.svd(A)
+print('矩阵A的左奇异向量为：\n', U)
+print('矩阵A的奇异值为：\n', X)
+print('矩阵A的右奇异向量为：\n', V)
+
+
+
+
 
 # 代码4-17
 A = np.diag([1, 2, 3, 4], k = 0)
