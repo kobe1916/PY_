@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy import stats as sts
 
+
 data = pd.read_csv("./tv.csv")
 #print(data)
 #print(type(data))
