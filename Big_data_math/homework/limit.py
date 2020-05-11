@@ -3,6 +3,7 @@ x = Symbol('x')
 y = (x*83-x**2+x/2)**exp(1/x)-sqrt(x**6+1)
 limit(y,x,oo)
 
+
 x = Symbol('x')
 y = sin(x)**tan(x)
 limit(y,x,pi/2,dir='-')
