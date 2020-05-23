@@ -140,3 +140,7 @@ integrate(f,x)
 x = Symbol('x')
 f = log(x)
 integrate(f,(x,0,5))
+
+
+
+
