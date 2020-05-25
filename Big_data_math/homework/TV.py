@@ -22,3 +22,5 @@ print('变异系数为：',sts.tstd(data)/sts.tmean(data))
 # 偏度峰度的度量
 print('偏度为：',sts.skew(data))
 print('峰度为：',sts.kurtosis(data))
+
+
